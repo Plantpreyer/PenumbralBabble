@@ -3,7 +3,7 @@
 
         <div class="pb-footer-logo">
             {% if site.logo %}
-            <img src="{{ site.logo | relative_url }}" alt="{{ site.title | escape }} logo">
+            <a class="pb-logo-link" href="{{ '/' | relative_url }}"><img src="{{ site.logo | relative_url }}" alt="{{ site.title | escape }} logo"></a>
             {% else %}
             <div class="pb-logo-placeholder">logo</div>
             {% endif %}

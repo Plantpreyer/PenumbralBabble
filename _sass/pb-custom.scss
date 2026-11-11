@@ -159,24 +159,37 @@ code {
     }
 }
 
-// Logo: wider rounded rectangle, sized in em so it scales with the footer's font-size
-.pb-footer-logo img {
-    width: 7em;
-    height: 5em;
-    object-fit: cover;
-    border-radius: 10px;
+// Logo: circle, sized in em so it scales with the footer's font-size
+.pb-logo-link {
     display: block;
+    position: relative;
+    width: 5em;
+    height: 5em;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: $surface;
     opacity: 0.85;
 
     border: 2px solid $accent-hover;
     padding: 3px;
 }
 
+// Image sits a bit smaller than the circle, so more of the picture shows
+.pb-logo-link img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100%;
+    width: auto;
+    max-width: none;
+    transform: translate(-50%, -50%);
+}
+
 .pb-logo-placeholder {
-    width: 7em;
+    width: 5em;
     height: 5em;
     border: 1px dashed $border;
-    border-radius: 10px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
