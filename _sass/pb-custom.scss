@@ -9,7 +9,7 @@ $accent-hover: #c4a7f0;
 $teal: #5eb1bf;
 
 .wrapper {
-    max-width: 80%;
+    max-width: 66%;
 
     // Phones: use more of the screen
     @media (max-width: 600px) {
@@ -36,11 +36,27 @@ body {
     color: $text;
 }
 
+body {
+    font: 400 16px/1.5 -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", "Apple Color Emoji", Roboto, Helvetica, Arial, sans-serif;
+}
+
+
+
 a {
     color: $accent;
 
     &:hover {
         color: $accent-hover;
+    }
+}
+
+.home {
+    .page-heading {
+        font-size: 2rem;
+        font-weight: 300;
+        letter-spacing: -1px;
+        margin-bottom: 10px;
+        color: $text;
     }
 }
 
@@ -50,7 +66,7 @@ a {
     background-color: $surface;
     border-top: 5px solid $accent;
     border-bottom: 1px solid $border;
-    padding: 14px 0;
+    // padding: 14px 0;
 
     .site-title,
     .site-title:visited {
@@ -68,15 +84,17 @@ a {
         align-items: center;
     }
 
+
+
     .site-logo {
         height: 2.2em;
         width: auto;
-        border-radius: 10px;
+        // border-radius: 10px;
         object-fit: cover;
         display: block;
         opacity: 0.85;
-        border: 2px solid $accent-hover;
-        padding: 3px;
+        // border: 2px solid $accent-hover;
+        // padding: 3px;
         box-sizing: border-box;
     }
 }
@@ -122,14 +140,13 @@ code {
     display: grid;
     grid-template-columns: auto 1fr auto;
     gap: 20px;
-    align-items: center;
+    align-items: start;
 }
 
 .pb-footer-title {
     color: $muted;
     font-weight: 600;
-    margin: 4px 0 4px;
-    padding-top: 10px;
+    margin: 0px 0 4px;
     font-size: 0.9em;
     text-transform: uppercase;
     letter-spacing: 0.06em;
@@ -146,6 +163,7 @@ code {
         list-style: none;
         margin: 0;
         padding: 0;
+        padding-bottom: 10px;
         display: flex;
         gap: 14px;
     }
@@ -163,14 +181,14 @@ code {
 .pb-logo-link {
     display: block;
     position: relative;
-    width: 5em;
-    height: 5em;
+    width: 3em;
+    height: 3em;
     border-radius: 50%;
     overflow: hidden;
     background-color: $surface;
     opacity: 0.85;
 
-    border: 2px solid $accent-hover;
+    // border: 2px solid $accent-hover;
     padding: 3px;
 }
 

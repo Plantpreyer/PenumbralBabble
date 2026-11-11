@@ -3,7 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
-title:
+title: penumbralBabble
 ---
 
 On the lessons I've learned, am learning, and have yet to learn —
