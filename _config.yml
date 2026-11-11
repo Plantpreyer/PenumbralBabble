@@ -21,11 +21,12 @@
 title: penumbralBabble
 email: plantpreyer@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Scream into the void - thoughts, reflections, and introspection by an undergraduate.
+  Screams into the void - thoughts, reflections, and introspection by an undergraduate with no particular theme.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://penumbralbabble.duckdns.org" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: 
 github_username:  plantpreyer
+github_repo: "https://github.com/Plantpreyer/PenumbralBabble"
 logo: /assets/penbabble.jpg
 
 # Build settings

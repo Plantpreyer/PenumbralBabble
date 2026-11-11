@@ -1,0 +1,185 @@
+// Palette
+$bg: #0d0d12;
+$surface: #15151d;
+$border: #2a2a38;
+$text: #d8d6e0;
+$muted: #8b8a9b;
+$accent: #9d7cd8;
+$accent-hover: #c4a7f0;
+$teal: #5eb1bf;
+
+.wrapper {
+    max-width: 80%;
+
+    // Phones: use more of the screen
+    @media (max-width: 600px) {
+        max-width: 94%;
+    }
+
+    // Very wide monitors: stop the text getting too long to read
+    @media (min-width: 1500px) {
+        max-width: 1200px;
+    }
+}
+
+// Muted link that lights up on hover
+@mixin muted-link {
+    color: $muted;
+
+    &:hover {
+        color: $accent-hover;
+    }
+}
+
+body {
+    background-color: $bg;
+    color: $text;
+}
+
+a {
+    color: $accent;
+
+    &:hover {
+        color: $accent-hover;
+    }
+}
+
+
+// #header
+.site-header {
+    background-color: $surface;
+    border-top: 5px solid $accent;
+    border-bottom: 1px solid $border;
+    padding: 14px 0;
+
+    .site-title,
+    .site-title:visited {
+        color: $text;
+    }
+
+    .site-nav .page-link,
+    .site-nav .nav-item {
+        color: $muted;
+    }
+
+    // Header logo
+    .site-title {
+        display: flex;
+        align-items: center;
+    }
+
+    .site-logo {
+        height: 2.2em;
+        width: auto;
+        border-radius: 10px;
+        object-fit: cover;
+        display: block;
+        opacity: 0.85;
+        border: 2px solid $accent-hover;
+        padding: 3px;
+        box-sizing: border-box;
+    }
+}
+
+// #endheader
+
+.post-meta {
+    color: $muted;
+}
+
+blockquote {
+    border-left: 4px solid $teal;
+    color: $muted;
+}
+
+pre,
+code {
+    background-color: $surface;
+    border-color: $border;
+}
+
+// Footer
+.pb-footer {
+    background-color: transparent;
+    border-top: 1px solid $border;
+    padding: 16px 0 80px;
+    margin-top: 24px;
+    font-size: 1em;
+
+    @media (max-width: 600px) {
+        .pb-footer-grid {
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+
+        .pb-footer-links ul {
+            flex-wrap: wrap;
+        }
+    }
+}
+
+.pb-footer-grid {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 20px;
+    align-items: center;
+}
+
+.pb-footer-title {
+    color: $muted;
+    font-weight: 600;
+    margin: 4px 0 4px;
+    padding-top: 10px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.pb-footer-about p:not(.pb-footer-title) {
+    color: $muted;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.pb-footer-links {
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 14px;
+    }
+
+    li {
+        margin: 0;
+    }
+
+    a {
+        @include muted-link;
+    }
+}
+
+// Logo: wider rounded rectangle, sized in em so it scales with the footer's font-size
+.pb-footer-logo img {
+    width: 7em;
+    height: 5em;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    opacity: 0.85;
+
+    border: 2px solid $accent-hover;
+    padding: 3px;
+}
+
+.pb-logo-placeholder {
+    width: 7em;
+    height: 5em;
+    border: 1px dashed $border;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $muted;
+    font-size: 0.7em;
+}
