@@ -1,0 +1,34 @@
+<footer class="site-footer pb-footer">
+  <div class="wrapper pb-footer-grid">
+
+    <div class="pb-footer-logo">
+      {% if site.logo %}
+        <img src="{{ site.logo | relative_url }}" alt="{{ site.title | escape }} logo">
+      {% else %}
+        <div class="pb-logo-placeholder">logo</div>
+      {% endif %}
+    </div>
+
+    <div class="pb-footer-about">
+      <p class="pb-footer-title">{{ site.title | escape }}</p>
+      <p>{{ site.description | escape }}</p>
+    </div>
+
+    <nav class="pb-footer-links" aria-label="Footer">
+      <p class="pb-footer-title">Pages</p>
+      <ul>
+        <li><a href="{{ '/' | relative_url }}">Home</a></li>
+        {% for p in site.pages %}
+          {% if p.title %}
+            <li><a href="{{ p.url | relative_url }}">{{ p.title | escape }}</a></li>
+          {% endif %}
+        {% endfor %}
+        {% if site.github_username %}
+          <li><a href="https://github.com/{{ site.github_username }}">GitHub</a></li>
+        {% endif %}
+      </ul>
+    </nav>
+
+  </div>
+  
+</footer>

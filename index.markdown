@@ -4,7 +4,6 @@
 
 layout: home
 title:
-subtitle: "Screaming into the void"
 ---
 
 On the lessons I've learned, am learning, and have yet to learn —
